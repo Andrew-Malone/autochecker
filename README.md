@@ -1,4 +1,4 @@
-# PDF Page Number Comparison and Colorization
+# Imposition Page Number Autochecker
 
 This program takes two PDFs, an imposition and an imposition mock-up, extracts their page numbers, compares them, and then colorizes the pages in the imposition PDF based on whether or not the page numbers match.
 
