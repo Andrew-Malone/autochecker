@@ -1,5 +1,5 @@
 This program takes two pdfs, an imposition and a imposition mock-up, extracts their page numbers, compares them,
-and then colorizes the pages in the imposition pdf based on whether or not the pages match.
+and then colorizes the pages in the imposition pdf based on whether or not the pages numbers match.
 
 MAIN
 
