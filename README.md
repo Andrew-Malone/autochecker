@@ -2,12 +2,11 @@
 
 This program takes two PDFs, an imposition and an imposition mock-up, extracts their page numbers, compares them, and then colorizes the pages in the imposition PDF based on whether or not the page numbers match.
 
-## Main
+## Basic Structure
 
 1. Import both PDFs
-2. Get the mockup list minus the offset
-3. Get the actual list and colorize the pages
-4. Output the modified pdf
+2. Get the mockup list (minus the FM and CVR offset, roman numerals set for FM pages appropriately)
+3. Get the actual list, compare, colorize the pages, output the modified pdf
 
 ## Functions
 
