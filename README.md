@@ -5,12 +5,18 @@ This program takes two PDFs, an imposition and an imposition mock-up, extracts t
 ## Main
 
 1. Import both PDFs
-2. Get offset (preceding cover pages + FM pages)
-3. `actual_list` = get_actual_page_numbers()
-4. `mockup_list` = get_mockup_page_numbers(offset)
-5. `compare_and_output(actual_list, mockup_list)`
+2. Get the mockup list minus the offset
+3. Get the actual list and colorize the pages
+4. Output the modified pdf
 
 ## Functions
+
+### `get_mockup_page_numbers(offset)`
+
+- Get the offset
+- Get the page numbers from the imposition mock-up
+- Subtract the offset, set the negatives to the FM roman numerals
+- Return a 2D list
 
 ### `get_actual_page_numbers`
 
@@ -19,13 +25,7 @@ This program takes two PDFs, an imposition and an imposition mock-up, extracts t
   ```python
   [ [iv, 2, 4, 7], [6, 8, 9, 11], [x, x, 0, x], [x, x, x, x] ]
   ```
-
-### `get_mockup_page_numbers(offset)`
-
-- Get the page numbers from the imposition mock-up
-  - Extract the numbers, set the FM pages, subtract the offset from the rest
-- Return a 2D list
-
+  
 ### `colorize(sig_number, color)`
 
 - Surround a sig with a border depending on its status:
