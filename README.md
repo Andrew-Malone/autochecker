@@ -26,7 +26,7 @@ This program takes two PDFs, an imposition and an imposition mock-up, extracts t
   ```python
   [ [iv, 2, 4, 7], [6, 8, 9, 11], [x, x, 0, x], [x, x, x, x] ]
   ```
--Iterate through the sigs
-   -Iterate through the pages, comparing mockup and actual
-      -Set matches to green, 0s to grey, and non-matches to red
+- Iterate through the sigs
+  - Iterate through the pages, comparing mockup and actual
+    - Set matches to green, 0s to grey, and non-matches to red
 - Export the modified PDF
