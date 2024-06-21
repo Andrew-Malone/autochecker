@@ -21,7 +21,7 @@ This program takes two PDFs, an imposition and an imposition mock-up, extracts t
 
 - If the two lists are different lengths, alert that the number of sigs differs between the mock-up and actual imposition.
 - Divide the actual imposition into eight sections, 4 each on the top and bottom, and extract the page numbers.
-- Possible regex: (?<=^|\s)(i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv|xvi|xvii|xviii|xix|xx|xxi|xxii|xxiii|xxiv|xxv|xxvi|xxvii|xxviii|xxix|xxx|\b[1-9]\b|\b[1-9][0-9]\b|\b[1-9][0-9][0-9]\b)(?=\s|$)
+- Current regex: \b(?:[ivx]{1,4}|x{1,2})\b|\b\d{1,3}\b(?!\S)
 - Get the 2D list:
   ```python
   [ [iv, 2, 4, 7], [6, 8, 9, 11], [0, x, 0, 0], [0, 0, 0, 0] ]
