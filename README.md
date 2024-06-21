@@ -4,20 +4,19 @@ This program takes two PDFs, an imposition and an imposition mock-up, extracts t
 
 ## Basic Structure
 
-1. Import both PDFs
-2. Get the mockup list (minus the FM and CVR offset, roman numerals set for FM pages appropriately)
-3. Get the actual list, compare, colorize the pages, output the modified pdf
+1. Import the page imposition PDF
+2. Calculate the mockup list based on the length of the PDF, printer, the FM and CVR offset, 8 pagers.
+3. Extract the PDFs page list, compare, colorize the pages, output the modified pdf
 
 ## Functions
 
 ### `get_mockup_page_numbers`
 
-- Get the offset
-- Get the page numbers from the imposition mock-up
-- Subtract the offset, set the negatives to the FM roman numerals
+- Caculate the page numbers
+- Set the FM page numbers to roman numerals.
 - Return a 2D list
 
-### `compare_and_output()`
+### `compare_and_output`
 
 - If the two lists are different lengths, alert that the number of sigs differs between the mock-up and actual imposition.
 - Divide the actual imposition into eight sections, 4 each on the top and bottom, and extract the page numbers.
